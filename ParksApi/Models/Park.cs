@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
-
+using System;
+using System.Collections.Generic;
 
 namespace ParksApi.Models
 {
@@ -11,6 +12,7 @@ namespace ParksApi.Models
     [Required]
     public string State { get; set; }
     public int SqMiles { get; set; }
+
 
   }
 }

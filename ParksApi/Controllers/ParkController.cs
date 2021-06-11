@@ -10,6 +10,7 @@ using System.Linq;
 
 namespace ParksApi.Controllers
 {
+  [Produces("application/json")]
   [Route("api/[controller]")]
   [ApiController]
   public class ParksController : ControllerBase
@@ -21,7 +22,14 @@ namespace ParksApi.Controllers
       _db = db;
     }
     // Get api/parks
+    // [HttpGet]
+
     [HttpGet]
+    public async Task<ActionResult<IEnumerable<Park>>> Get()
+    {
+      return await _db.Parks.ToListAsync();
+    }
+
     public async Task<ActionResult<IEnumerable<Park>>> Get(string name, string state)
     {
       var query = _db.Parks.AsQueryable();
@@ -59,7 +67,8 @@ namespace ParksApi.Controllers
       }
       return park;
     }
-    // PUT: api/Parks/5
+
+    // PUT: api/Parks/{id}
     [HttpPut("{id}")]
     public async Task<IActionResult> Put(int id, Park park)
     {
@@ -92,7 +101,23 @@ namespace ParksApi.Controllers
     {
       return _db.Parks.Any(e => e.ParkId == id);
     }
+
+
     // DELETE: api/Parks/5
+    /// <summary>
+    /// Deletes a specific Park from API.
+    /// </summary>
+    /// /// <remarks>
+    /// Sample request:
+    ///
+    ///     POST /Park
+    ///     {
+    ///        "id": 1,
+    ///        "name": "YellowStone",
+    ///        "state": Wyoming, Idahotrue
+    ///     }
+    ///
+    /// </remarks>
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeletePark(int id)
     {
