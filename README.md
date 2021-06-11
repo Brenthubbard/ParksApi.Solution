@@ -9,7 +9,7 @@
 ## Technologies Used
 
 * _C#_
-* _.NET 5.0.102_
+* _.NET 5.0_
 * _<span>ASP.NET</span> Core Mvc 
 * _Swagger_
 * _MySQL_
