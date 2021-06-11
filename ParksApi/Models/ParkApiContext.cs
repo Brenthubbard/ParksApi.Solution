@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 
 
 
-namespace ParkApi.Models
+namespace ParksApi.Models
 {
   public class ParkApiContext : DbContext
   {

@@ -1,15 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+using ParksApi.Models;
+using System;
+using System.Reflection;
+using System.IO;
 using Microsoft.OpenApi.Models;
 
 namespace ParksApi
@@ -27,7 +25,7 @@ namespace ParksApi
     public void ConfigureServices(IServiceCollection services)
     {
 
-      services.AddDbContext<ParksApiContext>(opt =>
+      services.AddDbContext<ParkApiContext>(opt =>
           opt.UseMySql(Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(Configuration["ConnectionStrings:DefaultConnection"])));
       services.AddControllers();
     }
