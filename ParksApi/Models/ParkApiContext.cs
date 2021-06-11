@@ -1,16 +1,15 @@
+using Microsoft.EntityFrameworkCore;
 
 
 
-
-namespace ParksApi.Models
+namespace ParkApi.Models
 {
-  public class ParksApi
+  public class ParkApiContext : DbContext
   {
-    public int ParkId { get; set; }
-    [Required]
-    public string Name { get; set; }
-    public string State { get; set; }
-    public int SqMiles { get; set; }
-    
+    public ParkApiContext(DbContextOptions<ParkApiContext> options)
+    : base(options)
+    {
+    }
+    public DbSet<Park> Parks { get; set; }
   }
 }
