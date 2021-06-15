@@ -61,26 +61,167 @@ _This application creates a database to hold parks and their respective sizes an
 The following URl's will take you to the desired endpoints.
 First use the base Url = https://localhost:5000
 then for 
-GET  https://localhost:5000/api/(content)
-POST https://localhost:5000/api/(content)
-PUT  https://localhost:5000/api/(content)/{id}
-DELETE  https://localhost:5000/api/(content){id}
+Example Query:<br/>>
+ https://localhost:5000/api/Canyonlands National Park/5
 
-Example https://localhost:5000/api/Canyonlands National Park/5
-
-Sample Response
+Example Response:
 {
    "parkId": 5,
         "name": "Canyonlands National Park",
         "state": "Utah",
         "sqMiles": 527
 }
+Query: GET  https://localhost:5000/api/(parks) <br /> 
+Example Response: {
+        "parkId": 1,
+        "name": "Yellowstone",
+        "state": "Wyoming and Idaho",
+        "sqMiles": 3471
+    },
+    {
+        "parkId": 2,
+        "name": "Arches National Park",
+        "state": "Utah",
+        "sqMiles": 120
+    },
+    {
+        "parkId": 3,
+        "name": "Yosemite National Park",
+        "state": "California",
+        "sqMiles": 1169
+    },
+    {
+        "parkId": 4,
+        "name": "Glacier National Park",
+        "state": "Montana",
+        "sqMiles": 1583
+    },
+    {
+        "parkId": 5,
+        "name": "Canyonlands National Park",
+        "state": "Utah",
+        "sqMiles": 527
+    }
+Query: POST https://localhost:5000/api/(parks)
+<br /> 
+*In the Body you will need to add the data you wish to post <br/>
+Example data input: 
+ {
+        "parkId": 90,
+        "name": "AwesomeLands National Park",
+        "state": "Utah",
+        "sqMiles": 1200
+    }
+Example Response: 201Created
+[
+    {
+        "parkId": 1,
+        "name": "Yellowstone",
+        "state": "Wyoming and Idaho",
+        "sqMiles": 3471
+    },
+    {
+        "parkId": 2,
+        "name": "Arches National Park",
+        "state": "Utah",
+        "sqMiles": 120
+    },
+    {
+        "parkId": 3,
+        "name": "Yosemite National Park",
+        "state": "California",
+        "sqMiles": 1169
+    },
+    {
+        "parkId": 4,
+        "name": "Glacier National Park",
+        "state": "Montana",
+        "sqMiles": 1583
+    },
+    {
+        "parkId": 5,
+        "name": "Canyonlands National Park",
+        "state": "Utah",
+        "sqMiles": 527
+    },
+    {
+        "parkId": 90,
+        "name": "AwesomeLands National Park",
+        "state": "Utah",
+        "sqMiles": 1200
+    }
+]
+Query: PUT  https://localhost:5000/api/(parks)/{id}<br /> 
+Example to add to the body of the post:
+ {
+        "parkId": 93,
+        "name": "AwesomeLands State Park",
+        "state": "Idaho",
+        "sqMiles": 1200
+    }
+Example Response:201Created
+{
+    "parkId": 93,
+    "name": "AwesomeLands State Park",
+    "state": "Idaho",
+    "sqMiles": 1200
+}
+
+Query: DELETE  https://localhost:5000/api/(parks)/{id}<br /> 
+Example Response:200 OK
+[
+    {
+        "parkId": 1,
+        "name": "Yellowstone",
+        "state": "Wyoming and Idaho",
+        "sqMiles": 3471
+    },
+    {
+        "parkId": 2,
+        "name": "Arches National Park",
+        "state": "Utah",
+        "sqMiles": 120
+    },
+    {
+        "parkId": 3,
+        "name": "Yosemite National Park",
+        "state": "California",
+        "sqMiles": 1169
+    },
+    {
+        "parkId": 4,
+        "name": "Glacier National Park",
+        "state": "Montana",
+        "sqMiles": 1583
+    },
+    {
+        "parkId": 5,
+        "name": "Canyonlands National Park",
+        "state": "Utah",
+        "sqMiles": 527
+    },
+    {
+        "parkId": 90,
+        "name": "AwesomeLands National Park",
+        "state": "Utah",
+        "sqMiles": 1200
+    },
+    {
+        "parkId": 93,
+        "name": "AwesomeLands State Park",
+        "state": "Idaho",
+        "sqMiles": 1200
+    }
+]
+
+
 ### Checking the API documentation using Swagger
 * Whatever URL your local host is using, just add "/swagger" to the end of it!
 * You can also USE the API from here. Just click one of GET, POST, PUT, or DELETE buttons, and then click Try it out. 
 
 ## Known Bugs
- _No known bugs_
+ _Swagger is WIP_ 
+
 
 ## License
 
