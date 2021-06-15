@@ -63,7 +63,7 @@ First use the base Url = https://localhost:5000
 then for 
 Example Query:<br/>>
  https://localhost:5000/api/Canyonlands National Park/5<br />
-
+<hr/>
 Example Response:<br />
 {<br />
    "parkId": 5,<br />
@@ -72,6 +72,7 @@ Example Response:<br />
         "sqMiles": 527<br />
 }<br />
 Query: GET  https://localhost:5000/api/(parks) <br /> 
+<hr/>
 Example Response: {<br />
         "parkId": 1,<br />
         "name": "Yellowstone",<br />
@@ -104,6 +105,7 @@ Example Response: {<br />
     }<br />
 Query: POST https://localhost:5000/api/(parks)<br />
 <br /> 
+<hr/>
 *In the Body you will need to add the data you wish to post <br/>
 Example data input: <br />
  {<br />
@@ -149,8 +151,10 @@ Example Response: 201Created<br />
         "state": "Utah",<br />
         "sqMiles": 1200<br />
     }
-]
+]<br />
+<hr/>
 Query: PUT  https://localhost:5000/api/(parks)/{id}<br /> 
+<hr/>
 Example to add to the body of the post:<br />
  {<br />
         "parkId": 93,<br />
@@ -167,6 +171,7 @@ Example Response:201Created<br />
 }<br />
 
 Query: DELETE  https://localhost:5000/api/(parks)/{id}<br /> 
+<hr/>
 Example Response:200 OK<br />
 [<br />
     {<br />
