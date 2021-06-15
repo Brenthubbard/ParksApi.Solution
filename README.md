@@ -62,158 +62,157 @@ The following URl's will take you to the desired endpoints.
 First use the base Url = https://localhost:5000
 then for 
 Example Query:<br/>>
- https://localhost:5000/api/Canyonlands National Park/5
+ https://localhost:5000/api/Canyonlands National Park/5<br />
 
-Example Response:
-{
-   "parkId": 5,
-        "name": "Canyonlands National Park",
-        "state": "Utah",
-        "sqMiles": 527
-}
+Example Response:<br />
+{<br />
+   "parkId": 5,<br />
+        "name": "Canyonlands National Park",<br />
+        "state": "Utah",<br />
+        "sqMiles": 527<br />
+}<br />
 Query: GET  https://localhost:5000/api/(parks) <br /> 
-Example Response: {
-        "parkId": 1,
-        "name": "Yellowstone",
-        "state": "Wyoming and Idaho",
-        "sqMiles": 3471
-    },
-    {
-        "parkId": 2,
-        "name": "Arches National Park",
-        "state": "Utah",
-        "sqMiles": 120
-    },
-    {
-        "parkId": 3,
-        "name": "Yosemite National Park",
-        "state": "California",
-        "sqMiles": 1169
-    },
-    {
-        "parkId": 4,
-        "name": "Glacier National Park",
-        "state": "Montana",
-        "sqMiles": 1583
-    },
-    {
-        "parkId": 5,
-        "name": "Canyonlands National Park",
-        "state": "Utah",
-        "sqMiles": 527
-    }
-Query: POST https://localhost:5000/api/(parks)
+Example Response: {<br />
+        "parkId": 1,<br />
+        "name": "Yellowstone",<br />
+        "state": "Wyoming and Idaho",<br />
+        "sqMiles": 3471<br />
+    },<br />
+    {<br />
+        "parkId": 2,<br />
+        "name": "Arches National Park",<br />
+        "state": "Utah",<br />
+        "sqMiles": 120<br />
+    },<br />
+    {<br />
+        "parkId": 3,<br />
+        "name": "Yosemite National Park",<br />
+        "state": "California",<br />
+        "sqMiles": 1169<br />
+    },<br />
+    {<br />
+        "parkId": 4,<br />
+        "name": "Glacier National Park",<br />
+        "state": "Montana",<br />
+        "sqMiles": 1583<br />
+    },<br />
+    {<br />
+        "parkId": 5,<br />
+        "name": "Canyonlands National Park",<br />
+        "state": "Utah",<br />
+        "sqMiles": 527<br />
+    }<br />
+Query: POST https://localhost:5000/api/(parks)<br />
 <br /> 
 *In the Body you will need to add the data you wish to post <br/>
-Example data input: 
- {
-        "parkId": 90,
-        "name": "AwesomeLands National Park",
-        "state": "Utah",
-        "sqMiles": 1200
-    }
-Example Response: 201Created
-[
-    {
-        "parkId": 1,
-        "name": "Yellowstone",
-        "state": "Wyoming and Idaho",
-        "sqMiles": 3471
-    },
-    {
-        "parkId": 2,
-        "name": "Arches National Park",
-        "state": "Utah",
-        "sqMiles": 120
-    },
-    {
-        "parkId": 3,
-        "name": "Yosemite National Park",
-        "state": "California",
-        "sqMiles": 1169
-    },
-    {
-        "parkId": 4,
-        "name": "Glacier National Park",
-        "state": "Montana",
-        "sqMiles": 1583
-    },
-    {
-        "parkId": 5,
-        "name": "Canyonlands National Park",
-        "state": "Utah",
-        "sqMiles": 527
-    },
-    {
-        "parkId": 90,
-        "name": "AwesomeLands National Park",
-        "state": "Utah",
-        "sqMiles": 1200
+Example data input: <br />
+ {<br />
+        "parkId": 90,<br />
+        "name": "AwesomeLands National Park",<br />
+        "state": "Utah",<br />
+        "sqMiles": 1200<br />
+    }<br />
+Example Response: 201Created<br />
+[<br />
+    {<br />
+        "parkId": 1,<br />
+        "name": "Yellowstone",<br />
+        "state": "Wyoming and Idaho",<br />
+        "sqMiles": 3471<br />
+    },<br />
+    {<br />
+        "parkId": 2,<br />
+        "name": "Arches National Park",<br />
+        "state": "Utah",<br />
+        "sqMiles": 120<br />
+    },<br />
+    {<br />
+        "parkId": 3,<br />
+        "name": "Yosemite National Park",<br />
+        "state": "California",<br />
+        "sqMiles": 1169<br />
+    {<br />
+        "parkId": 4,<br />
+        "name": "Glacier National Park",<br />
+        "state": "Montana",<br />
+        "sqMiles": 1583<br />
+    },<br />
+    {<br />
+        "parkId": 5,<br />
+        "name": "Canyonlands National Park",<br />
+        "state": "Utah",<br />
+        "sqMiles": 527<br />
+    },<br />
+    {<br />
+        "parkId": 90,<br />
+        "name": "AwesomeLands National Park",<br />
+        "state": "Utah",<br />
+        "sqMiles": 1200<br />
     }
 ]
 Query: PUT  https://localhost:5000/api/(parks)/{id}<br /> 
-Example to add to the body of the post:
- {
-        "parkId": 93,
-        "name": "AwesomeLands State Park",
-        "state": "Idaho",
-        "sqMiles": 1200
-    }
-Example Response:201Created
-{
-    "parkId": 93,
-    "name": "AwesomeLands State Park",
-    "state": "Idaho",
-    "sqMiles": 1200
-}
+Example to add to the body of the post:<br />
+ {<br />
+        "parkId": 93,<br />
+        "name": "AwesomeLands State Park",<br />
+        "state": "Idaho",<br />
+        "sqMiles": 1200<br />
+    }<br />
+Example Response:201Created<br />
+{<br />
+    "parkId": 93,<br />
+    "name": "AwesomeLands State Park",<br />
+    "state": "Idaho",<br />
+    "sqMiles": 1200<br />
+}<br />
 
 Query: DELETE  https://localhost:5000/api/(parks)/{id}<br /> 
-Example Response:200 OK
-[
-    {
-        "parkId": 1,
-        "name": "Yellowstone",
-        "state": "Wyoming and Idaho",
-        "sqMiles": 3471
-    },
-    {
-        "parkId": 2,
-        "name": "Arches National Park",
-        "state": "Utah",
-        "sqMiles": 120
-    },
-    {
-        "parkId": 3,
-        "name": "Yosemite National Park",
-        "state": "California",
-        "sqMiles": 1169
-    },
-    {
-        "parkId": 4,
-        "name": "Glacier National Park",
-        "state": "Montana",
-        "sqMiles": 1583
-    },
-    {
-        "parkId": 5,
-        "name": "Canyonlands National Park",
-        "state": "Utah",
-        "sqMiles": 527
-    },
-    {
-        "parkId": 90,
-        "name": "AwesomeLands National Park",
-        "state": "Utah",
-        "sqMiles": 1200
-    },
-    {
-        "parkId": 93,
-        "name": "AwesomeLands State Park",
-        "state": "Idaho",
-        "sqMiles": 1200
-    }
-]
-
+Example Response:200 OK<br />
+[<br />
+    {<br />
+        "parkId": 1,<br />
+        "name": "Yellowstone",<br />
+        "state": "Wyoming and Idaho",<br />
+        "sqMiles": 3471<br />
+    },<br />
+    {<br />
+        "parkId": 2,<br />
+        "name": "Arches National Park",<br />
+        "state": "Utah",<br />
+        "sqMiles": 120<br />
+    },<br />
+    {<br />
+        "parkId": 3,<br />
+        "name": "Yosemite National Park",<br />
+        "state": "California",<br />
+        "sqMiles": 1169<br />
+    },<br />
+    {<br />
+        "parkId": 4,<br />
+        "name": "Glacier National Park",<br />
+        "state": "Montana",<br />
+        "sqMiles": 1583<br />
+    },<br />
+    {<br />
+        "parkId": 5,<br />
+        "name": "Canyonlands National Park",<br />
+        "state": "Utah",<br />
+        "sqMiles": 527<br />
+    },<br />
+    {<br />
+        "parkId": 90,<br />
+        "name": "AwesomeLands National Park",<br />
+        "state": "Utah",<br />
+        "sqMiles": 1200<br />
+    },<br />
+    {<br />
+        "parkId": 93,<br />
+        "name": "AwesomeLands State Park",<br />
+        "state": "Idaho",<br />
+        "sqMiles": 1200<br />
+    }<br />
+]<br />
+<br />
 
 ### Checking the API documentation using Swagger
 * Whatever URL your local host is using, just add "/swagger" to the end of it!
