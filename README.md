@@ -56,6 +56,25 @@ _This application creates a database to hold parks and their respective sizes an
 * Enter "dotnet run" in the terminal and hit enter to start a local host. 
 * Ctrl + click the link that populates in the terminal to view the application in the webpage. It is probably http://localhost:5000/
 * Use Ctrl + C in the terminal to quit the host and close out of the window in the browser.
+
+*_EndPoints_
+The following URl's will take you to the desired endpoints.
+First use the base Url = https://localhost:5000
+then for 
+GET  https://localhost:5000/api/(content)
+POST https://localhost:5000/api/(content)
+PUT  https://localhost:5000/api/(content)/{id}
+DELETE  https://localhost:5000/api/(content){id}
+
+Example https://localhost:5000/api/Canyonlands National Park/5
+
+Sample Response
+{
+   "parkId": 5,
+        "name": "Canyonlands National Park",
+        "state": "Utah",
+        "sqMiles": 527
+}
 ### Checking the API documentation using Swagger
 * Whatever URL your local host is using, just add "/swagger" to the end of it!
 * You can also USE the API from here. Just click one of GET, POST, PUT, or DELETE buttons, and then click Try it out. 
